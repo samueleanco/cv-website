@@ -8,14 +8,13 @@ export const personalPursuits: PersonalPursuit[] = [
       "Years of consistent training and competition have made discipline, precision, and long-term development part of how I approach difficult work.",
     highlights: [
       "1st Dan",
-      "Approximately 4–5 years in the SKR squad",
       "International tournament experience",
       "Four bronze medals at European Championships",
     ],
   },
   {
     title: "Muay Thai",
-    meta: "Approximately one year of training",
+    meta: "Combat sport",
     description:
       "Training has added a different technical and competitive discipline alongside karate.",
     highlights: ["Competition and fight experience"],

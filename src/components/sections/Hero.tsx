@@ -32,16 +32,6 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="portrait-frame" aria-label="Reserved space for a future portrait">
-        <div className="portrait-frame__corner portrait-frame__corner--top" />
-        <div className="portrait-frame__monogram" aria-hidden="true">SA</div>
-        <div className="portrait-frame__note">
-          <span>Portrait / 01</span>
-          <span>Image reserved</span>
-        </div>
-        <div className="portrait-frame__corner portrait-frame__corner--bottom" />
-      </div>
-
       <div className="hero__index" aria-hidden="true">
         <span>01</span>
         <span>/</span>

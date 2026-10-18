@@ -1,4 +1,5 @@
 import type { SocialLink } from "@/types/portfolio";
+import { profile } from "@/data/profile";
 
 export const socialLinks: SocialLink[] = [
   {
@@ -15,7 +16,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: "Email",
-    href: "mailto:samueele.ancona@gmail.com",
+    href: `mailto:${profile.email}`,
     icon: "email",
     external: false,
   },

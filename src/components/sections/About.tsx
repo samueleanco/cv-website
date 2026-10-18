@@ -49,7 +49,6 @@ export function About() {
             </div>
           ))}
           <div className="journey__profile">
-            <span>{profile.age} years old</span>
             <span>{profile.location}</span>
           </div>
         </div>

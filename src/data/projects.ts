@@ -5,11 +5,8 @@ import type { Project } from "@/types/portfolio";
 export const projects: Project[] = [];
 
 export const plannedProjectAreas = [
-  "Backend",
-  ".NET",
-  "gRPC",
-  "Cybersecurity",
-  "DevOps",
-  "Platform Engineering",
-  "TryHackMe labs",
+  "Linux",
+  "Networking",
+  "Security labs on TryHackMe",
+  "Homelab",
 ];

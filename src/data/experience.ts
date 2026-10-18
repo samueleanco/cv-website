@@ -7,7 +7,7 @@ export const experience: ExperienceItem[] = [
     period: "September 2026 — Present",
     employmentLevel: "50% position",
     description:
-      "Contributing to backend development with C#, .NET, gRPC, and SQL while continuing to build practical engineering experience. Working with modern AI-assisted and agentic software development workflows.",
-    technologies: ["C#", ".NET", "gRPC", "SQL", "Backend systems"],
+      "Contributing to backend development with C#, .NET, SQL Server, gRPC, and REST while continuing to build practical engineering experience. Day-to-day work also includes Linux servers and Datadog monitoring.",
+    technologies: ["C#", ".NET", "SQL Server", "gRPC", "REST", "Linux", "Datadog"],
   },
 ];
