@@ -34,7 +34,7 @@ export function Projects() {
             </p>
           </div>
           <div className="project-empty__areas">
-            <p>Likely areas</p>
+            <p>Currently exploring</p>
             <Tags items={plannedProjectAreas} subtle />
           </div>
         </div>

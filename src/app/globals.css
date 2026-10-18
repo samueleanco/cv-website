@@ -168,7 +168,7 @@ a {
   position: relative;
   display: grid;
   min-height: 100svh;
-  grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(3rem, 8vw, 8rem);
   align-items: center;
   padding-block: calc(var(--header-height) + 4rem) 5rem;
@@ -301,78 +301,6 @@ a {
   width: 1rem;
   height: 1rem;
   fill: currentColor;
-}
-
-.portrait-frame {
-  position: relative;
-  display: flex;
-  aspect-ratio: 4 / 5;
-  max-height: 34rem;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  border: 1px solid var(--line-strong);
-  background:
-    radial-gradient(circle at 50% 42%, rgba(121, 168, 255, 0.13), transparent 36%),
-    linear-gradient(135deg, transparent 49.8%, var(--line) 50%, transparent 50.2%),
-    var(--surface);
-}
-
-.portrait-frame::before {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 25% 20%;
-  content: "";
-  mask-image: linear-gradient(to bottom, black, transparent 80%);
-}
-
-.portrait-frame__monogram {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: rgba(237,241,247,0.85);
-  font-size: clamp(4rem, 8vw, 7rem);
-  font-weight: 650;
-  letter-spacing: -0.08em;
-}
-
-.portrait-frame__note {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  margin-top: auto;
-  padding: 1rem;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  background: rgba(11,13,16,0.75);
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-}
-
-.portrait-frame__corner {
-  position: absolute;
-  z-index: 2;
-  width: 1rem;
-  height: 1rem;
-  border-color: var(--accent);
-}
-
-.portrait-frame__corner--top {
-  top: 0.7rem;
-  left: 0.7rem;
-  border-top: 1px solid;
-  border-left: 1px solid;
-}
-
-.portrait-frame__corner--bottom {
-  right: 0.7rem;
-  bottom: 3.7rem;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
 }
 
 .hero__index {
@@ -941,7 +869,6 @@ a {
   }
 
   .hero {
-    grid-template-columns: minmax(0, 1.2fr) minmax(14rem, 0.8fr);
     gap: 2.5rem;
   }
 
@@ -985,11 +912,6 @@ a {
 
   .hero h1 {
     font-size: clamp(3.4rem, 18vw, 5.5rem);
-  }
-
-  .portrait-frame {
-    width: min(100%, 22rem);
-    justify-self: end;
   }
 
   .hero__index {

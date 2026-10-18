@@ -55,7 +55,6 @@ export interface SpokenLanguage {
 
 export interface PersonalProfile {
   name: string;
-  age: number;
   location: string;
   role: string;
   focus: string;

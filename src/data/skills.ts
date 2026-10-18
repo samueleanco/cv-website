@@ -2,28 +2,19 @@ import type { SkillGroup, SpokenLanguage } from "@/types/portfolio";
 
 export const skillGroups: SkillGroup[] = [
   {
-    category: "Languages / Backend",
-    description: "Tools I currently use for backend development and data work.",
-    skills: ["C#", "SQL"],
+    category: "Languages / Technologies",
+    description: "Tools I use for backend development and data work. Python and Bash are at a basics level.",
+    skills: ["C#", ".NET", "SQL", "gRPC", "REST", "Python (basics)", "Bash (basics)"],
   },
   {
-    category: "Frameworks / Technologies",
-    description: "Technologies I am applying in my current development work.",
-    skills: [".NET", "gRPC"],
+    category: "Platform / Operations",
+    description: "Tools I work with for running and observing software. Docker is at a basics level.",
+    skills: ["Linux", "Git", "Datadog (monitoring)", "Docker (basics)"],
   },
   {
-    category: "Areas of focus",
-    description: "Fields I am studying, practising, and building experience in.",
-    skills: [
-      "Backend Development",
-      "Cybersecurity",
-      "Security Engineering",
-      "Platforms",
-      "DevOps",
-      "Secure systems",
-      "Agentic Coding",
-      "AI-assisted Development",
-    ],
+    category: "Security",
+    description: "Learning status through TryHackMe, not a certification.",
+    skills: ["Security fundamentals (TryHackMe)"],
   },
 ];
 
