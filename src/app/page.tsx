@@ -18,8 +18,8 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <Education />
         <Projects />
+        <Education />
         <Skills />
         <BeyondCode />
         <Contact />

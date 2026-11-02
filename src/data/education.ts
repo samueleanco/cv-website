@@ -20,7 +20,7 @@ export const education: EducationItem[] = [
   {
     institution: "ETH Zurich",
     qualification:
-      "Physics Laboratory Technician EFZ with Federal Vocational Baccalaureate",
+      "Physics Laboratory Technician, Federal VET (EFZ)",
     period: "2020 — 2024",
     description:
       "A scientific and technical education shaped by analytical thinking, precise experimentation, structured work, careful documentation, and methodical problem solving.",

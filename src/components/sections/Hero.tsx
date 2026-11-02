@@ -1,41 +1,44 @@
+import { ArrowLink } from "@/components/ui/ArrowLink";
 import { profile } from "@/data/profile";
 import { socialLinks } from "@/data/socialLinks";
-import { SocialIcon } from "@/components/ui/SocialIcon";
+
+// When a CV PDF is added (e.g. public/cv.pdf), set this to "/cv.pdf" and the
+// secondary hero button becomes "Download CV".
+const CV_URL: string | null = null;
 
 export function Hero() {
   return (
-    <section className="hero shell" id="top" aria-labelledby="hero-title">
-      <div className="hero__copy">
-        <p className="hero__status">
-          <span aria-hidden="true" /> Switzerland · Student & developer
-        </p>
-        <h1 id="hero-title">{profile.name}</h1>
-        <p className="hero__role">{profile.role}</p>
-        <p className="hero__focus">{profile.focus}</p>
-        <p className="hero__intro">{profile.introduction}</p>
-        <div className="hero__actions">
-          <a className="button button--primary" href="#projects">
-            View my work <span aria-hidden="true">↓</span>
+    <section className="hero" id="top" aria-labelledby="hero-title">
+      <div className="container">
+        <p className="mono eyebrow">COMPUTER SCIENCE · FHNW · SWITZERLAND</p>
+        <h1 id="hero-title">
+          {profile.name}
+        </h1>
+        <p className="position">{profile.role}</p>
+        <p className="intro">{profile.heroIntro}</p>
+        <div className="actions">
+          <a className="btn btn--primary" href="#projects">
+            View Projects
           </a>
-          <a className="button button--secondary" href="#contact">
-            Contact me
-          </a>
-        </div>
-        <div className="hero__socials" aria-label="Social links">
-          {socialLinks.slice(0, 2).map((link) => (
-            <a key={link.label} href={link.href} target="_blank" rel="noreferrer">
-              <SocialIcon name={link.icon} />
-              {link.label}
-              <span aria-hidden="true">↗</span>
+          {CV_URL ? (
+            <a className="btn" href={CV_URL} download>
+              Download CV
             </a>
-          ))}
+          ) : (
+            <a className="btn" href="#contact">
+              Get in Touch
+            </a>
+          )}
         </div>
-      </div>
-
-      <div className="hero__index" aria-hidden="true">
-        <span>01</span>
-        <span>/</span>
-        <span>08</span>
+        <ul className="socials" aria-label="Profiles">
+          {socialLinks.map((link) => (
+            <li key={link.label}>
+              <ArrowLink href={link.href} external={link.external}>
+                {link.label}
+              </ArrowLink>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

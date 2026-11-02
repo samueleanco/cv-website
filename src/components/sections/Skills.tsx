@@ -1,44 +1,44 @@
-import { languages, skillGroups } from "@/data/skills";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Section } from "@/components/ui/Section";
 import { Tags } from "@/components/ui/Tags";
+import { languages, skillGroups } from "@/data/skills";
 
 export function Skills() {
   return (
-    <section className="section shell" id="skills" aria-labelledby="skills-title">
-      <SectionHeading
-        number="06"
-        eyebrow="Skills"
-        title="Current tools and developing areas."
-        description="A factual snapshot of the technologies I use and the fields I am actively exploring."
-      />
-
-      <div className="skills-grid">
-        {skillGroups.map((group, index) => (
-          <article className="skill-group" key={group.category}>
-            <span className="skill-group__number" aria-hidden="true">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-            <h3>{group.category}</h3>
-            <p>{group.description}</p>
-            <Tags items={group.skills} />
-          </article>
-        ))}
-      </div>
-
-      <div className="languages-block">
-        <div>
-          <p className="languages-block__eyebrow">Communication</p>
-          <h3>Languages</h3>
+    <Section id="skills" number="05" label="Skills" title="Tools, with honest levels.">
+      {skillGroups.map((group) => (
+        <div className="skill-row" key={group.category}>
+          <h3>{group.category}</h3>
+          <div>
+            {group.level !== undefined && (
+              <div className="meter">
+                <div
+                  className="meter__track"
+                  role="meter"
+                  aria-label={`${group.category} overall level`}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={group.level}
+                >
+                  <div className="meter__fill" style={{ width: `${group.level}%` }} />
+                </div>
+                <span className="mono">{group.level}%</span>
+              </div>
+            )}
+            <Tags items={group.skills} label={group.category} />
+            <p className="note">{group.description}</p>
+          </div>
         </div>
-        <dl>
-          {languages.map((language) => (
-            <div key={language.language}>
-              <dt>{language.language}</dt>
-              <dd>{language.proficiency}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </section>
+      ))}
+
+      <h3 className="mono subhead">Spoken languages</h3>
+      <ul>
+        {languages.map((item) => (
+          <li className="lang-row" key={item.language}>
+            <span>{item.language}</span>
+            <span className="mono">{item.proficiency}</span>
+          </li>
+        ))}
+      </ul>
+    </Section>
   );
 }

@@ -20,11 +20,3 @@ export const personalPursuits: PersonalPursuit[] = [
     highlights: ["Competition and fight experience"],
   },
 ];
-
-export const otherInterests = [
-  "Reading",
-  "Sports",
-  "Learning",
-  "Challenging myself",
-  "Continuous self-development",
-];
