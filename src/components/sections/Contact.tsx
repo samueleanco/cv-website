@@ -1,6 +1,5 @@
 import { ArrowLink } from "@/components/ui/ArrowLink";
 import { Section } from "@/components/ui/Section";
-import { profile } from "@/data/profile";
 import { socialLinks } from "@/data/socialLinks";
 
 export function Contact() {
@@ -10,9 +9,6 @@ export function Contact() {
         I&apos;m happy to talk about software development, infrastructure, security, and
         professional opportunities.
       </p>
-      <a className="link contact-mail" href={`mailto:${profile.email}`}>
-        {profile.email}
-      </a>
       <ul className="contact-links">
         {socialLinks
           .filter((link) => link.external)

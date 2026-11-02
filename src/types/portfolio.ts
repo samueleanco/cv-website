@@ -57,7 +57,6 @@ export interface PersonalProfile {
   location: string;
   role: string;
   focus: string;
-  email: string;
   introduction: string;
   heroIntro: string;
   about: string[];
