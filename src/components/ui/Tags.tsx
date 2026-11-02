@@ -1,13 +1,10 @@
-interface TagsProps {
-  items: string[];
-  subtle?: boolean;
-}
-
-export function Tags({ items, subtle = false }: TagsProps) {
+export function Tags({ items, label }: { items: string[]; label?: string }) {
   return (
-    <ul className={`tag-list${subtle ? " tag-list--subtle" : ""}`} aria-label="Technologies and topics">
+    <ul className="tags" aria-label={label}>
       {items.map((item) => (
-        <li key={item}>{item}</li>
+        <li className="tag" key={item}>
+          {item}
+        </li>
       ))}
     </ul>
   );

@@ -1,9 +1,6 @@
-export type IconName = "github" | "linkedin" | "email";
-
 export interface SocialLink {
   label: string;
   href: string;
-  icon: IconName;
   external: boolean;
 }
 
@@ -40,12 +37,14 @@ export interface Project {
   liveUrl?: string;
   year: string;
   status: ProjectStatus;
+  image?: { src: string; alt: string };
 }
 
 export interface SkillGroup {
   category: string;
   description: string;
   skills: string[];
+  level?: number; // overall self-assessment, 0-100
 }
 
 export interface SpokenLanguage {
@@ -60,6 +59,8 @@ export interface PersonalProfile {
   focus: string;
   email: string;
   introduction: string;
+  heroIntro: string;
+  about: string[];
 }
 
 export interface PersonalPursuit {
